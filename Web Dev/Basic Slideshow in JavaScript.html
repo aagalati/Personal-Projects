@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title> Exercise 4 </title>
+
+	<script>
+
+	var picNumb = 1;
+
+
+	function slideshow(increment){
+
+		picNumb += increment;
+		
+		if (picNumb == 0) picNumb = 4;
+		if (picNumb == 5) picNumb = 1;
+
+		switch(picNumb) {
+			case 1: document.getElementById("mainImage").src = "pic1.jpg"; break;
+			case 2: document.getElementById("mainImage").src = "pic2.jpg"; break;
+			case 3: document.getElementById("mainImage").src = "pic3.jpg"; break;
+			case 4: document.getElementById("mainImage").src = "pic4.jpg"; break;
+		}
+	}
+
+	</script>
+
+	</head>
+
+
+	<body onload="slideshow(0)">
+
+		<h1>Slideshow!</h1>
+		<img id="mainImage" src="pic1.jpg" cite="http://www.bbc.com/news/science-environment-35523676"> <br>
+		<u onclick="slideshow(-1)">Previous</u>
+		<u onclick="slideshow(1)">Next</u>
+
+	</body>
+
+
+</html>

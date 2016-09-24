@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="styling4.css"/>
+	<link rel="icon" href="dogicon.ico"/>
+	<title> Adopt-A-Dog/Cat </title>
+	</head>
+
+	<body>
+
+	<div id="header">
+		<img src="DogCatLogo.png" href="index.html" alt="Logo" width=230 height=100 cite="http://www.lostpawsrescueoftexas.org/" />
+		<h1 id="title">Adopt-A-Pet</h1>
+	</div>
+
+	<div id="menu">
+
+		<ul>
+			<li><a id="top" href="index.html">Home</a></li>
+			<li><a href="browse.html">Browse Available Pets</a></li>
+			<li><a href="find.html">Find a Pet</a></li>
+			<li><a href="dogcare.html">Dog Care</a></li>
+			<li><a href="catcare.html">Cat Care</a></li>
+			<li><a class="active" href="give.html">Give a pet away</a></li>
+			<li><a id="bottom" href="contact.html">Contact Us</a></li>
+		</ul>	
+
+
+	</div>
+
+	<div id="content">
+
+	<form>
+		
+		<label>Dog or Cat? </label>
+		<input id=pickdog type="radio" name="type" value="dog"> Dog
+		<input id=pickcat type="radio" name="type" value="dog"> Cat <br><br>
+
+		<label> Breed of pet </label>
+		<input type="text" name="breed" id="breed" /><br><br>
+
+		<label> Preferred age of animal</label>
+		<select>Preferred age of animal
+		<option>less than 1 year</option>
+		<option>1 - 3 years</option>
+		<option>4 - 6 years</option>
+		<option>7 years or older</option>
+		</select> <br> <br>
+
+		<label>Gender</label>
+		<input id="male" type="radio" name="gender" value="male"> Male
+		<input id="female" type="radio" name="gender" value="female"> Female
+		<input id="any" type="radio" name="gender" value="any"> Doesn't matter<br><br>
+
+		<input id=dogfriend type="checkbox" name"friend" value"dogfriend"> Friendly with other dogs<br>
+		<input id=catfriend type="checkbox" name"friend" value"catfriend"> Friendly with other cats<br>
+		<input id=kidfriend type="checkbox" name"friend" value"kidfriend"> Friendly with kids<br><br><br>
+
+		
+
+		Name: <input type="text" name="name" id="name" /><br><br>
+
+  		Email : <input type="text" name="email" id="email" /><br><br>
+
+  		<label>Comments</label>
+		<textarea name="comment" id="comment"></textarea><br><br>
+
+
+		<button id="submit" type="submit">Submit</button>
+		<button id="reset" type="reset">Reset</button><br>
+
+
+	</form>
+		
+	</div>
+
+	<div id="footer">
+
+		<a href="disclaimer.html"> Click here to read our disclaimer </a>
+
+	</div>
+
+
+
+
+	</body>
+
+
+
+
+</html>

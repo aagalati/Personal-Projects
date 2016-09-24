@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title> Exercise 1 </title>
+
+	<script type="text/javascript">
+
+	function addNumbers(arrayToAdd) {
+
+
+		var sum = 0;
+
+		var array = arrayToAdd.split(" ");
+
+		for(var i = 0; i < array.length; i++) {
+			sum += parseInt(array[i]);
+		}
+
+		alert("The sum of the numbers is " + sum);
+ 	
+ 		document.funcform.numb.value = sum;
+
+		return sum;
+
+	}
+
+	function getCurrentDate() {
+
+
+		var date = new Date();
+
+		var day = ["Sunday", "Monday", "Tuesday", "Wednesday", 
+				   "Thursday", "Friday", "Saturday"];
+
+		var month = [ "January", "February", "March", "April", "May",
+					  "June", "July", "August", "September", "October",
+					  "November", "December"];
+
+		var formatteddate = day[date.getDay()]+", "+month[date.getMonth()]+" "+date.getDate()+", "+date.getFullYear();
+
+
+		document.getElementById("displaydate").innerHTML = formatteddate;
+
+
+	}
+
+	function arrayToString(arrayOfWords) {
+
+
+
+	}
+
+	function getDigits(digits) {
+
+		var restr = "";
+
+		for (var i = 0; i < digits.length; i++) {
+			if (!(isNaN(digits.charAt(i)))){
+				restr += digits.charAt(i);
+			}
+		}
+
+		document.getElementById("displayDigits").innerHTML = restr;
+	}
+
+	function reverseString(rvstr) {
+
+		var cstr = "";
+
+		for (var i = rvstr.length-1; i >= 0; i--)
+			cstr += rvstr.charAt(i);
+
+		document.getElementById("displayReverse").innerHTML = cstr;
+	}
+
+	</script>
+
+
+	</head>
+
+	<body>
+
+
+		<form name=funcform>
+
+			<h1>Function: addNumbers, enter numbers below to be added (Please put spaces between each number!)</h1>
+			<input type="button" value="addNumbers" onclick="addNumbers(document.funcform.numb.value)">
+			<input type="text" name="numbers" id="numb">  <br>
+
+			<h2>Function: getCurrentDate, current date will appear under</h2>
+			<input type="button" value="getCurrentDate" onclick="getCurrentDate()">
+			<p id="displaydate">Date will be displayed here</p>
+
+			<h3>Function: arrayToString, enter words to be put together into a sentence</h3> <br>
+
+			<h4>Function: findMaxNumber, max number will appear on left</h4> <br>
+
+			<h5>Function: getDigits, enter a sentence of words and number, numbers will appear in order outside the sentence</h5>
+			<input type="button" value="getDigits" onclick="getDigits(document.funcform.digits.value)">
+			<input type="text" name="digits" id="digits"> 
+			<p id="displayDigits"></p>
+
+			<h6>Function: reverseString, enter a sentence, it will appear reversed</h6> 
+			<input type="button" value="reverseString" onclick="reverseString(document.funcform.revstring.value)">
+			<input type="text" name="revstring" id="revstring">
+			<p id="displayReverse"></p>
+
+		</form>
+
+
+
+	</body>
+
+
+</html>

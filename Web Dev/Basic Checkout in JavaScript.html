@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title> Exercise 2 </title>
+
+	<script type="text/javascript">
+		
+	function total() {
+
+		var cost1, cost2, cost3, total;
+
+		if(document.form2.basic.value == "" || isNaN(document.form2.basic.value)){
+			alert("Please fill in all info properly");
+			document.form2.basic.focus();
+		}
+		else if(document.form2.intro.value == "" || isNaN(document.form2.intro.value)){
+			alert("Please fill in all info properly");
+			document.form2.intro.focus();
+		}
+		else if(document.form2.advance.value == "" || isNaN(document.form2.advance.value)){
+			alert("Please fill in all info properly");
+			document.form2.advance.focus();
+		}
+		else {
+
+			cost1 = (document.form2.basic.value)*20.99;
+			cost2 = (document.form2.intro.value)*30.98;
+			cost3 = (document.form2.basic.value)*40.97;
+			total = cost1+cost2+cost3;
+
+			document.getElementById("b").innerHTML = "Basic XHTML (Quantity = "+document.form2.basic.value+"): $"+cost1;
+			document.getElementById("i").innerHTML = "Intro to PHP (Quantity = "+document.form2.intro.value+"): $"+cost2;
+			document.getElementById("a").innerHTML = "Advanced JQuery (Quantity = "+document.form2.advance.value+"): $"+cost3;
+			document.getElementById("t").innerHTML = "Final Total: $"+total;
+
+		}
+
+		return false;
+
+	}
+
+	</script>
+
+
+	</head>
+	<body>
+
+	<h1>Order Books Online</h1> <br>
+
+	<form name=form2>
+
+	<table>
+		
+	<tr>
+		<td>Book</td>
+		<td>Quantity</td>
+		<td>Price</td>
+	</tr>
+	<tr>
+		<td>Basic XHTML</td>
+		<td><input type="text" name="basic" id="basic" pattern="[0-9]" title="Only input numbers"></td>
+		<td>$20.99</td>
+	</tr>	
+	<tr>
+		<td>Intro to PHP</td>
+		<td><input type="text" name="intro" id="intro" pattern="[0-9]" title="Only input numbers"></td>
+		<td>$30.98</td>
+	</tr>	
+	<tr>
+		<td>Advanced JQuery</td>
+		<td><input type="text" name="advance" id="advance" pattern="[0-9]" title="Only input numbers"></td>
+		<td>$40.97</td>
+	</tr>	
+
+	<tr colspan = "2">
+		<td><input type="button" onclick="total();" value="Place Order"></td>
+	</tr>
+
+	</table>
+
+	<p id="b"></p>
+	<p id="i"></p>
+	<p id="a"></p>
+	<p id="t"></p>
+
+	</form>
+
+
+	</body>
+
+
+</html>
